@@ -1,0 +1,36 @@
+import {Builder, By, Key, until} from 'selenium-webdriver'
+import { expect } from 'chai'
+import { afterEach, beforeEach, describe, it } from 'mocha'
+
+async function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+describe('Wir testen die example.com website', function() {
+    this.timeout(30000)
+
+    let driver
+
+    beforeEach(async function () {
+        driver = await new Builder().forBrowser('chrome').build()
+    })
+
+    beforeEach(async function() {
+        driver = await new Builder().forBrowser('chrome').build()
+    })
+
+    afterEach(async function() {
+        await driver.quit()
+    })
+
+    it('besucht example.com und holt den Titel', async function() {
+        await driver.get('https://www.example.com')
+        await sleep(2000)
+
+        const title = await driver.getTitle()
+
+        console.log('Der Titel der Seite ist:', title)
+
+        expect(title).to.equal('Example Domain')
+    })
+})

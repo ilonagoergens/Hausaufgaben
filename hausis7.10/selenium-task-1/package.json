@@ -1,0 +1,17 @@
+{
+  "name": "selenium-task-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npx mocha ./*.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chromedriver": "^129.0.2",
+    "selenium-webdriver": "^4.25.0"
+  }
+}
