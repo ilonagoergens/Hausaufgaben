@@ -26,9 +26,6 @@ jobs:
         with:
           node-version: "22" # Specify the version of Node.js
       # Step 4: Run tests
-      - name: workpath
-        run: cd calculator_GihubAktions
-
       - name: Run tests
         run: npm test
 
@@ -46,8 +43,6 @@ jobs:
         with:
           node-version: "22" # Specify the version of Node.js
       # Step 3: Install dependencies (needed for deployment, e.g., for building the app)
-      - name: workpath
-        run: cd calculator_GihubAktions
       - name: Install dependencies
         run: npm install
       # Step 4: Deploy Application (this is just an echo for demonstration)
