@@ -13,6 +13,8 @@ jobs:
   run-tests:
     runs-on: ubuntu-latest
     steps:
+      - name: workpath
+        run: cd calculator_GihubAktions
       # Step 1: Checkout code
       - name: Checkout code
         uses: actions/checkout@v2
@@ -21,9 +23,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '22'  # Specify the version of Node.js
-      # Step 3: Install dependencies (needed for tests)
-      - name: Install dependencies
-        run: npm install
       # Step 4: Run tests
       - name: Run tests
         run: npm test

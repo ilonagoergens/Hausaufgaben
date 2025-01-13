@@ -1,0 +1,12 @@
+{
+  "name": "calculator_gihubaktions",
+  "version": "1.0.0",
+  "main": "calculator.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
