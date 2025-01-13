@@ -8,6 +8,10 @@ on:
     branches:
       - main # Trigger workflow on pull requests to the 'main' branch
 
+defaults:
+  run:
+    working-directory: calculator_GihubAktions
+
 jobs:
   # Job 1: Run Tests (depends on the install-dependencies job)
   run-tests:
